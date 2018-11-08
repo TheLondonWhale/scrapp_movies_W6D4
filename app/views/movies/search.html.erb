@@ -1,0 +1,34 @@
+
+<br />
+<h3 align="center">Résultat de votre recherche : "<%= params[:q] %>"</h3>
+<br />
+<% if @results.empty? %>
+<br />
+<h5 align="center">Désolé votre recherche n'a rien donné...</h5>
+<br />
+<%else%>
+
+  <% @results.each do |movie|%>
+
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Titre</th>
+        <th scope="col">Date de Sortie</th>
+        <!-- <th scope="col">Producteur</th> -->
+        <th scope="col">Affiche</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= movie[:title] %></td>
+        <td><%= movie[:release_date] %></td>
+        <!-- <td></td> -->
+        <td><img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2<%= movie[:poster] %>" style="width:150px;height:200px;"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <% end %>
+
+<% end %>

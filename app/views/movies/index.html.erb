@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  <br>
+
+  <h5 align="center"> Recherchez votre film ici</h5>
+
+    <div align="center">
+      <div class="form-group">
+        <%= form_tag("/search", method: "get") do %>
+          <%= label_tag(:q, "Le nom du film:") %>
+          <%= text_field_tag(:q) %>
+          <%= submit_tag("Search") %>
+        <% end %>
+      </div>
+    </div>
+  </body>
