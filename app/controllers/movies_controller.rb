@@ -8,5 +8,5 @@ class MoviesController < ApplicationController
     puts params
     @results = SearchMovie.new(params[:q]).search
   end
-  
+
 end

@@ -20,14 +20,3 @@ class SearchMovie
   end
 
 end
-
-=begin
-director = Tmdb::Movie.credits(movie.id)["crew"][0]["name"]
-puts "EHOH"
-puts director
-if director.empty?
-  director = "N/A"
-puts "EHOH"
-puts director
-temp_hash[:real] = director
-=end
